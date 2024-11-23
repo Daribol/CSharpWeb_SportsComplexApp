@@ -1,3 +1,6 @@
+using Microsoft.EntityFrameworkCore;
+using SportsComplexApp.Data;
+
 namespace SportsComplexApp.Web
 {
     public class Program
@@ -6,7 +9,15 @@ namespace SportsComplexApp.Web
         {
             var builder = WebApplication.CreateBuilder(args);
 
+            string connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+
             // Add services to the container.
+            builder.Services
+                .AddDbContext<SportsComplexDbContext>(options =>
+                {
+                    options.UseSqlServer(connectionString);
+                });
+
             builder.Services.AddControllersWithViews();
 
             var app = builder.Build();

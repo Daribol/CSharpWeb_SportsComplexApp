@@ -7,13 +7,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SportsComplexApp.Web", "Spo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SportsComplex.Web.ViewModels", "SportsComplex.Web.ViewModels\SportsComplex.Web.ViewModels.csproj", "{924A1DC0-F78C-423F-B8BA-5A662AB04FD3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportsComplexApp.Common", "SportsComplexApp.Common\SportsComplexApp.Common.csproj", "{F2E244D2-648A-45FB-9E43-E78A9DD0787E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SportsComplexApp.Common", "SportsComplexApp.Common\SportsComplexApp.Common.csproj", "{F2E244D2-648A-45FB-9E43-E78A9DD0787E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportsComplexApp.Data.Models", "SportsComplexApp.Data.Models\SportsComplexApp.Data.Models.csproj", "{7BE52903-3961-433B-8137-60FD2D3AA6AA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SportsComplexApp.Data.Models", "SportsComplexApp.Data.Models\SportsComplexApp.Data.Models.csproj", "{7BE52903-3961-433B-8137-60FD2D3AA6AA}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{AFF211F9-1AFE-4A84-AD37-A80BB6B68D07}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{517AFEB3-EAC9-4A42-BEE5-6C9F15DBDF97}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportsComplexApp.Data", "SportsComplexApp.Data\SportsComplexApp.Data.csproj", "{79AA0880-0BCD-4A99-B8DD-CE42BE1E7384}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -37,6 +39,10 @@ Global
 		{7BE52903-3961-433B-8137-60FD2D3AA6AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7BE52903-3961-433B-8137-60FD2D3AA6AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7BE52903-3961-433B-8137-60FD2D3AA6AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{79AA0880-0BCD-4A99-B8DD-CE42BE1E7384}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79AA0880-0BCD-4A99-B8DD-CE42BE1E7384}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79AA0880-0BCD-4A99-B8DD-CE42BE1E7384}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79AA0880-0BCD-4A99-B8DD-CE42BE1E7384}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -45,6 +51,7 @@ Global
 		{8F429B14-9D83-4257-9B8E-6E69D032C5A4} = {AFF211F9-1AFE-4A84-AD37-A80BB6B68D07}
 		{924A1DC0-F78C-423F-B8BA-5A662AB04FD3} = {AFF211F9-1AFE-4A84-AD37-A80BB6B68D07}
 		{7BE52903-3961-433B-8137-60FD2D3AA6AA} = {517AFEB3-EAC9-4A42-BEE5-6C9F15DBDF97}
+		{79AA0880-0BCD-4A99-B8DD-CE42BE1E7384} = {517AFEB3-EAC9-4A42-BEE5-6C9F15DBDF97}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EC156504-AE06-4C21-9FD2-264B6C6658FE}

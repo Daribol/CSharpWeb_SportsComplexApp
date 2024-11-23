@@ -9,6 +9,7 @@
   <ItemGroup>
     <ProjectReference Include="..\SportsComplex.Web.ViewModels\SportsComplex.Web.ViewModels.csproj" />
     <ProjectReference Include="..\SportsComplexApp.Common\SportsComplexApp.Common.csproj" />
+    <ProjectReference Include="..\SportsComplexApp.Data\SportsComplexApp.Data.csproj" />
   </ItemGroup>
 
   <ItemGroup>
@@ -16,6 +17,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="9.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="9.0.0" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.7" />
   </ItemGroup>
 
