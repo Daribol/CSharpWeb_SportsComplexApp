@@ -28,33 +28,6 @@ public class EntityValidationConstants
         public const string DateOfBirth = "dd-MM-yyyy";
     }
 
-    public static class MembershipType
-    {
-        public const int TypeNameMaxLength = 20;
-        public const int TypeNameMinLength = 2;
-
-        public const int PriceMaxValue = 500;
-        public const int PriceMinValue = 10;
-    }
-
-    public static class Reservation
-    {
-        public const string ReservationDate = "dd-MM-yyyy HH:mm";
-        public const int DurationMaxValue = 120;
-        public const int DurationMinValue = 30;
-    }
-
-    public static class SpaReservation
-    {
-        public const string SpaReservationDate = "dd-MM-yyyy HH:mm";
-
-        public const int DurationMaxValue = 120;
-        public const int DurationMinValue = 30;
-
-        public const decimal TotalPriceMaxValue = 500.00m;
-        public const decimal TotalPriceMinValue = 30.00m;
-    }
-
     public static class SpaService
     {
         public const int NameMaxLength = 50;
@@ -68,12 +41,22 @@ public class EntityValidationConstants
 
         public const decimal PriceMaxValue = 500.00m;
         public const decimal PriceMinValue = 30.00m;
+
+        public const string SpaReservationDate = "dd-MM-yyyy HH:mm";
     }
 
     public static class Sport
     {
         public const int NameMaxLength = 50;
         public const int NameMinLength = 5;
+
+        public const double MaxPriceValue = 500.00;
+        public const double MinPriceValue = 10.00;
+
+        public const string SportReservationDate = "dd-MM-yyyy HH:mm";
+
+        public const int DurationMaxValue = 120;
+        public const int DurationMinValue = 30;
     }
 
     public static class Trainer
@@ -87,13 +70,25 @@ public class EntityValidationConstants
         public const int SpecializationMaxLength = 50;
         public const int SpecializationMinLength = 5;
 
-        public const string HireDate = "dd-MM-yyyy";
-    }
+        public const string TrainerHireDate = "dd-MM-yyyy";
+        public const string TrainerSessionDate = "dd-MM-yyyy HH:mm";
 
-    public static class TrainerSession
-    {
-        public const string SessionDate = "dd-MM-yyyy HH:mm";
         public const int DurationMaxValue = 120;
         public const int DurationMinValue = 30;
+    }
+
+    public static class Tournament
+    {
+        public const int NameMaxLength = 100;
+        public const int NameMinLength = 5;
+
+        public const int DescriptionMaxLength = 5000;
+        public const int DescriptionMinLength = 10;
+
+        public const int LocationMaxLength = 100;
+        public const int LocationMinLength = 10;
+
+        public const string StartDate = "dd-MM-yyyy HH:mm";
+        public const string EndDate = "dd-MM-yyyy";
     }
 }
