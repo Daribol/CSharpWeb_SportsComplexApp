@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SportsComplexApp.Data;
 
@@ -11,9 +12,11 @@ using SportsComplexApp.Data;
 namespace SportsComplexApp.Data.Migrations
 {
     [DbContext(typeof(SportsComplexDbContext))]
-    partial class SportsComplexDbContextModelSnapshot : ModelSnapshot
+    [Migration("20241128093752_Change")]
+    partial class Change
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -305,12 +308,7 @@ namespace SportsComplexApp.Data.Migrations
                     b.Property<int>("SpaServiceId")
                         .HasColumnType("int");
 
-                    b.Property<int?>("ClientId1")
-                        .HasColumnType("int");
-
                     b.HasKey("ClientId", "SpaServiceId");
-
-                    b.HasIndex("ClientId1");
 
                     b.HasIndex("SpaServiceId");
 
@@ -440,7 +438,7 @@ namespace SportsComplexApp.Data.Migrations
 
                     b.HasIndex("TournamentId1");
 
-                    b.ToTable("TournamentRegistrations");
+                    b.ToTable("TournamentRegistration");
                 });
 
             modelBuilder.Entity("SportsComplexApp.Data.Models.Trainer", b =>
@@ -500,7 +498,7 @@ namespace SportsComplexApp.Data.Migrations
 
                     b.HasIndex("TrainerId1");
 
-                    b.ToTable("TrainerSessions");
+                    b.ToTable("TrainersSession");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -585,10 +583,6 @@ namespace SportsComplexApp.Data.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("SportsComplexApp.Data.Models.Client", null)
-                        .WithMany("SpaReservations")
-                        .HasForeignKey("ClientId1");
-
                     b.HasOne("SportsComplexApp.Data.Models.SpaService", "SpaService")
                         .WithMany("SpaReservations")
                         .HasForeignKey("SpaServiceId")
@@ -614,7 +608,7 @@ namespace SportsComplexApp.Data.Migrations
             modelBuilder.Entity("SportsComplexApp.Data.Models.TournamentRegistration", b =>
                 {
                     b.HasOne("SportsComplexApp.Data.Models.Client", "Client")
-                        .WithMany("TournamentRegistrations")
+                        .WithMany()
                         .HasForeignKey("ClientId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -637,7 +631,7 @@ namespace SportsComplexApp.Data.Migrations
             modelBuilder.Entity("SportsComplexApp.Data.Models.TrainerSession", b =>
                 {
                     b.HasOne("SportsComplexApp.Data.Models.Client", "Client")
-                        .WithMany("TrainerSessions")
+                        .WithMany("TrainerSession")
                         .HasForeignKey("ClientId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -661,11 +655,7 @@ namespace SportsComplexApp.Data.Migrations
                 {
                     b.Navigation("Reservations");
 
-                    b.Navigation("SpaReservations");
-
-                    b.Navigation("TournamentRegistrations");
-
-                    b.Navigation("TrainerSessions");
+                    b.Navigation("TrainerSession");
                 });
 
             modelBuilder.Entity("SportsComplexApp.Data.Models.Facility", b =>
