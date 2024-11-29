@@ -14,7 +14,7 @@ public class EntityValidationConstants
         public const int CapacityMinValue = 2;
     }
 
-    public static class Member
+    public static class Client
     {
         public const int NameMaxLength = 50;
         public const int NameMinLength = 2;
@@ -25,7 +25,7 @@ public class EntityValidationConstants
         public const int GenderMaxLength = 10;
         public const int GenderMinLength = 2;
 
-        public const string DateOfBirth = "dd-MM-yyyy";
+        public const string ClientDateOfBirth = "dd-MM-yyyy";
     }
 
     public static class SpaService
@@ -88,7 +88,7 @@ public class EntityValidationConstants
         public const int LocationMaxLength = 100;
         public const int LocationMinLength = 10;
 
-        public const string StartDate = "dd-MM-yyyy HH:mm";
-        public const string EndDate = "dd-MM-yyyy";
+        public const string TournamentStartDate = "dd-MM-yyyy HH:mm";
+        public const string TournamentEndDate = "dd-MM-yyyy";
     }
 }
