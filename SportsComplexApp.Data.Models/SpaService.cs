@@ -24,5 +24,10 @@ public class SpaService
     [Range((double) PriceMinValue, (double) PriceMaxValue)]
     public decimal Price { get; set; }
 
+    [Required]
+    [DataType(DataType.Date)]
+    [DisplayFormat(DataFormatString = SpaReservationDate, ApplyFormatInEditMode = true)]
+    public DateTime ReservationDate { get; set; }
+
     public ICollection<SpaReservation> SpaReservations { get; set; } = new List<SpaReservation>();
 }
