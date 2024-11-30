@@ -22,6 +22,9 @@ namespace SportsComplexApp.Data.Models
         [Range((double)MinPriceValue, (double)MaxPriceValue)]
         public decimal Price { get; set; }
 
+        [Required]
+        public string? ImageUrl { get; set; }
+
 
         [Required]
         [DataType(DataType.Date)]
