@@ -1,7 +1,10 @@
-﻿namespace SportsComplexApp.Data;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+
+namespace SportsComplexApp.Data;
 using Microsoft.EntityFrameworkCore;
 using SportsComplexApp.Data.Models;
-public class SportsComplexDbContext : DbContext
+public class SportsComplexDbContext : IdentityDbContext
 {
     public SportsComplexDbContext()
     {
